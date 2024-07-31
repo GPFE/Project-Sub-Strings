@@ -21,10 +21,10 @@ def make_hash(arr)
 end
 
 def substrings(words, dictionary)
-  words_arr = words.split(" ")
+  words_arr = words.downcase.split(" ")
   common_words = find_common_words(words_arr, dictionary)
   make_hash(common_words)
 end
 
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
-p substrings("go down go", dictionary)
+p substrings("Go, down", dictionary)
